@@ -29,6 +29,17 @@
             var member = null;
             document.addEventListener('DOMContentLoaded', function(){
                 member = JSON.parse(sessionStorage.getItem("member"));
+               
+
+                document.getElementById("name").value = member.name;
+                document.getElementById("email").value = member.email;
+                document.getElementById("phone").value = member.phone;
+                document.getElementById("country").value = member.city;
+                document.getElementById("address").value = member.address;
+                document.getElementById("securityQuestion").value = member.securityQuestion;
+                document.getElementById("securityAnswer").value = member.securityAnswer;
+                document.getElementById("age").value = member.age;
+                document.getElementById("income").value = member.income;
 
                 if(member.sla == 1) {
                     document.getElementById("serviceLevelAgreement").checked = true;
@@ -295,7 +306,7 @@
                 </div>
             </section>
             <div class="container">
-                <script src="/displayMessageLong.js"></script>
+                <script src="../../displayMessageLong.js"></script>
                 <div class="col-md-12">
                     <div class="row" style="min-height: 500px;">
                         <div class="tabs">
@@ -320,7 +331,7 @@
                                         </div>
                                         <div class="form-group">
                                             <label>E-mail Address</label>
-                                            <input class="form-control" required="true" id="email" disabled />
+                                            <input class="form-control" required="true" id="email"  />
                                         </div>
                                         <div class="form-group">
                                             <label>Phone</label>
