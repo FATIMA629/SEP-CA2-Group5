@@ -207,7 +207,7 @@
                 var password = document.getElementById("password").value;
                 var repassword = document.getElementById("repassword").value;
                 var ok = true;
-                console.log(oldPassword)
+                console.log(oldPassword);
                 if (document.getElementById("profileForm").checkValidity()) {
                     if (oldPassword != "" && password != "" && repassword != "") {
                         var memberData = {
@@ -248,6 +248,9 @@
                         }).catch(function (error) {
                             console.log(error);
                         }); 
+                    } else {
+                        alert("Please enter your old password.");
+                        ok = false;
                     }
 
                     if(ok) {
